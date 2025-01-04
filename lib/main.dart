@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
     fetchHijriDate();
     fetchCurrentDateTime();
   }
-
+//fungsi untuk mengambil waktu salat
   Future<void> fetchPrayerTimes() async {
     final city = 'Jakarta';
     final country = 'ID';
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
       print('Error fetching prayer times: $e');
     }
   }
-
+//fungsi untuk mengambil tanggal hijriyah
   Future<void> fetchHijriDate() async {
     final url = 'http://api.aladhan.com/v1/gToH?date=2024-12-30';
 
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
       print('Error fetching Hijri date: $e');
     }
   }
-
+//fungsi untuk mengambil waktu saat ini
   void fetchCurrentDateTime() {
     final now = DateTime.now();
     final formatter = DateFormat('EEEE, d MMMM yyyy, HH:mm:ss');
@@ -99,6 +99,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+// fungsi untuk menampilkan halaman home
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SuratPendekPage()), // Arahkan ke halaman Surat Pendek
+                  MaterialPageRoute(builder: (context) => SuratPendekPage()), // Arahkan ke halaman Surat-surat Pendek
                 );
               },
             ),
@@ -148,7 +149,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BacaanSalatPage()),
+                  MaterialPageRoute(builder: (context) => BacaanSalatPage()), // Arahkan ke halaman Bacaan salat
                 );
               },
             ),
@@ -205,7 +206,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
+  //fungsi untuk menampilkan waktu salat
   Widget buildPrayerTimeCard(String prayer, String? time) {
     return Card(
       margin: EdgeInsets.all(8.0),
@@ -223,7 +224,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         subtitle: Text(
-          time ?? 'Tidak tersedia',
+          time ?? 'Tidak Tersedia',
           style: TextStyle(fontSize: 16),
         ),
       ),
