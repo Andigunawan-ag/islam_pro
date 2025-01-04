@@ -63,11 +63,13 @@ class BacaanSalatPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
-          buildCard(context, 'Bacaan dan Niat Salat 5 waktu',BacaanSholat5WaktuPage()),
-          buildCard(context, 'Bacaan sholat ', Bacaanshalat()),
-          buildCard(context, 'Bacaan doa Sehabis Sholat', Bacaandoasehabissholat()),
-          buildCard(context, 'Bacaan doa doa pilihan', Bacaandoadoapilihan()),
-          buildCard(context, 'Bacaan doa selamat', Bacaandoatahlil()),
+          buildCard(context, 'Bacaan dan Niat Sholat 5 waktu',
+              BacaanSholat5WaktuPage()),
+          buildCard(context, 'Bacaan Sholat ', Bacaanshalat()),
+          buildCard(
+              context, 'Bacaan Doa Sehabis Sholat', Bacaandoasehabissholat()),
+          buildCard(context, 'Bacaan Doa Doa pilihan', Bacaandoadoapilihan()),
+          buildCard(context, 'Bacaan Doa Selamat', Bacaandoatahlil()),
         ],
       ),
     );
@@ -123,35 +125,35 @@ class BacaanSholat5WaktuPage extends StatelessWidget {
             children: [
               // Niat Salat Subuh
               _buildSection(
-                'Niat Salat Subuh',
+                'Niat Sholat Subuh',
                 'اُصَلّى فَرْضَ الصُّبْحِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ آدَاءً مَأْمُوْمً / إِمَامًا لِلَّهِ تَعَالَى',
                 'Aku niat sholat fardhu subuh dua rakaat menghadap kiblat, menjadi makmum/imam karena Allah Ta’ala',
               ),
               SizedBox(height: 20),
               // Niat Salat Dzuhur
               _buildSection(
-                'Niat Salat Dzuhur',
+                'Niat Sholat Dzuhur',
                 'اُصَلّى فَرْضَ الظُّهْرِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ آدَاءً مَأْمُوْمً / إِمَامًا لِلَّهِ تَعَالَى',
                 'Aku niat sholat fardhu dzuhur empat rakaat menghadap kiblat, menjadi makmum/imam karena Allah Ta’ala',
               ),
               SizedBox(height: 20),
               // Niat Salat Asar
               _buildSection(
-                'Niat Salat Asar',
+                'Niat Sholat Asar',
                 'اُصَلّى فَرْضَ الْعَصْرِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ آدَاءً مَأْمُوْمً / إِمَامًا لِلَّهِ تَعَالَى',
                 'Aku niat sholat fardhu asar dua rakaat menghadap kiblat, menjadi makmum/imam karena Allah Ta’ala',
               ),
               SizedBox(height: 20),
               // Niat Salat Maghrib
               _buildSection(
-                'Niat Salat Maghrib',
+                'Niat Sholat Maghrib',
                 'اُصَلّى فَرْضَ الْمَغْرِبِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ آدَاءً مَأْمُوْمً / إِمَامًا لِلَّهِ تَعَالَى',
                 'Aku niat sholat fardhu maghrib tiga rakaat menghadap kiblat, menjadi makmum/imam karena Allah Ta’ala',
               ),
               SizedBox(height: 20),
               // Niat Salat Isya
               _buildSection(
-                'Niat Salat Isya',
+                'Niat Sholat Isya',
                 'اُصَلّى فَرْضَ الْعِشَاءِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ آدَاءً مَأْمُوْمً / إِمَامًا لِلَّهِ تَعَالَى',
                 'Aku niat sholat fardhu isya empat rakaat menghadap kiblat, menjadi makmum/imam karena Allah Ta’ala',
               ),
@@ -168,8 +170,9 @@ class BacaanSholat5WaktuPage extends StatelessWidget {
       width: double.infinity, // Ensures the container spans the entire width
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.blueAccent, width: 2),  // Border for each section
-        borderRadius: BorderRadius.circular(10),  // Rounded corners
+        border: Border.all(
+            color: Colors.blueAccent, width: 2), // Border for each section
+        borderRadius: BorderRadius.circular(10), // Rounded corners
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -346,7 +349,8 @@ class Bacaandoasehabissholat extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16.0),
       child: Container(
-        width: double.infinity, // This ensures the container extends to the full width
+        width: double
+            .infinity, // This ensures the container extends to the full width
         padding: EdgeInsets.all(16.0),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -778,14 +782,17 @@ class Bacaandoatahlil extends StatelessWidget {
   Widget build(BuildContext context) {
     return BacaanPage(
       title: 'Bacaan Doa Tahlil',
-      niat: 'لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ وَلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
-      artiNiat:'Tiada Tuhan selain Allah, hanya Dia yang Maha Esa, tiada sekutu bagi-Nya, miliki-Nya lah segala kerajaan dan hanya bagi-Nya segala pujian, dan Dia Maha Kuasa atas segala sesuatu.',
-      bacaan: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ حَمْدًا يُوَافِي نِعْمَاهُ وَيُكَافِئُ مَزِيدَهُ يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلاَلِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ',
-      artiBacaan: 'Bismillahirrahmaanirrahiim. Alhamdu lillaahi rabbil aalamiin, hamdan yuwaafii ni amahu wayukaafii maziidahu. Ya rabbanaa lakal hamdu kamaa yan baghhi lijalaali wajhika wa azhiimi sulthaanika. Allahumma shalli alaa sayyidinaa muhammadin wa alaa aali sayyidinaa muhammad. Artinya: Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang. Segala puji bagi Allah, Tuhan semesta alam, puji yang sesuai dengan ni’mat-Nya dan dapat membalas karunia-Nya. Ya Tuhan kami, hanya kepada-Mu segala pujian, sebagaimana yang layak bagi keagungan wajah-Mu dan kebesaran kerajaan-Mu. Ya Allah, curahkanlah shalawat kepada junjungan kami, Nabi Muhammad, dan kepada keluarga Nabi Muhammad.',
+      niat:
+          'لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ وَلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
+      artiNiat:
+          'Tiada Tuhan selain Allah, hanya Dia yang Maha Esa, tiada sekutu bagi-Nya, miliki-Nya lah segala kerajaan dan hanya bagi-Nya segala pujian, dan Dia Maha Kuasa atas segala sesuatu.',
+      bacaan:
+          'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ حَمْدًا يُوَافِي نِعْمَاهُ وَيُكَافِئُ مَزِيدَهُ يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلاَلِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ',
+      artiBacaan:
+          'Bismillahirrahmaanirrahiim. Alhamdu lillaahi rabbil aalamiin, hamdan yuwaafii ni amahu wayukaafii maziidahu. Ya rabbanaa lakal hamdu kamaa yan baghhi lijalaali wajhika wa azhiimi sulthaanika. Allahumma shalli alaa sayyidinaa muhammadin wa alaa aali sayyidinaa muhammad. Artinya: Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang. Segala puji bagi Allah, Tuhan semesta alam, puji yang sesuai dengan ni’mat-Nya dan dapat membalas karunia-Nya. Ya Tuhan kami, hanya kepada-Mu segala pujian, sebagaimana yang layak bagi keagungan wajah-Mu dan kebesaran kerajaan-Mu. Ya Allah, curahkanlah shalawat kepada junjungan kami, Nabi Muhammad, dan kepada keluarga Nabi Muhammad.',
     );
   }
 }
-
 
 // Widget umum untuk menampilkan bacaan dan niat salat
 class BacaanPage extends StatelessWidget {
