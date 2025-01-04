@@ -105,6 +105,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Jadwal Salat'),
+        centerTitle: true,
       ),
       drawer: Drawer(
         child: ListView(
@@ -115,11 +116,12 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.blueAccent,
               ),
               child: Text(
-                'Menu Sidebar',
+                'Menu utama',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 23,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins',
                 ),
               ),
             ),
@@ -135,7 +137,8 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.book, color: Colors.blueAccent),
-              title: Text('Surat Pendek'),
+              title: Text('Surat-surat Pendek'),
+              subtitle: Text('Surat-surat pendek yang dibaca saat salat'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -145,7 +148,8 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.book, color: Colors.blueAccent),
-              title: Text('Bacaan Salat'),
+              title: Text('Bacaan-bacaan Salat'),
+              subtitle: Text('Bacaan-bacaan salat yang dibaca saat salat'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -169,11 +173,11 @@ class _HomePageState extends State<HomePage> {
             child: ListTile(
               title: Text(
                 'Tanggal Hari Ini',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
               ),
               subtitle: Text(
                 'Gregorian: $gregorianDate\nHijriyah: $hijriDate',
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 16, fontFamily: 'Poppins'),
               ),
             ),
           ),
@@ -186,11 +190,11 @@ class _HomePageState extends State<HomePage> {
             child: ListTile(
               title: Text(
                 'Waktu Saat Ini',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
               ),
               subtitle: Text(
                 currentDateTime,
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 16, fontFamily: 'Poppins'),
               ),
             ),
           ),
@@ -221,11 +225,12 @@ class _HomePageState extends State<HomePage> {
             fontWeight: FontWeight.bold,
             fontSize: 18,
             color: Colors.blueAccent,
+            fontFamily: 'Poppins',
           ),
         ),
         subtitle: Text(
           time ?? 'Tidak Tersedia',
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 16, fontFamily: 'Poppins'),
         ),
       ),
     );
