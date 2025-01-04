@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:intl/intl.dart'; // Tambahkan package intl
+import 'package:intl/intl.dart'; //  package intl
 import 'bacaan_salat.dart'; // Import halaman Bacaan Salat
 import 'surat_pendek.dart'; // Import halaman Surat Pendek
 
@@ -29,73 +29,74 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Map<String, dynamic> timings = {};
-  bool isLoading = true;
-  String hijriDate = '';
-  String gregorianDate = '';
-  String currentDateTime = '';
+  Map<String, dynamic> timings = {}; 
+  bool isLoading = true; 
+  String hijriDate = ''; 
+  String gregorianDate = ''; 
+  String currentDateTime = ''; 
 
   @override
   void initState() {
-    super.initState();
-    fetchPrayerTimes();
-    fetchHijriDate();
-    fetchCurrentDateTime();
+    super.initState(); 
+    fetchPrayerTimes(); 
+    fetchHijriDate(); 
+    fetchCurrentDateTime(); 
   }
 //fungsi untuk mengambil waktu salat
   Future<void> fetchPrayerTimes() async {
-    final city = 'Jakarta';
-    final country = 'ID';
-    final url = 'http://api.aladhan.com/v1/timingsByCity?city=$city&country=$country&method=2';
+    final city = 'Jakarta'; 
+    final country = 'ID'; 
+    final url = 'http://api.aladhan.com/v1/timingsByCity?city=$city&country=$country&method=2';  
 
-    try {
-      final response = await http.get(Uri.parse(url));
-
-      if (response.statusCode == 200) {
+    //fungsi untuk mengambil data dari internet
+    try { 
+      final response = await http.get(Uri.parse(url)); 
+      if (response.statusCode == 200) { 
         final data = json.decode(response.body);
         setState(() {
-          timings = data['data']['timings'];
-          isLoading = false;
+          timings = data['data']['timings']; 
+          isLoading = false; 
         });
       } else {
         setState(() {
-          isLoading = false;
+          isLoading = false; 
         });
-        print('Failed to load prayer times. Status code: ${response.statusCode}');
+        print('Failed to load prayer times. Status code: ${response.statusCode}'); 
       }
     } catch (e) {
       setState(() {
-        isLoading = false;
+        isLoading = false; // 
       });
-      print('Error fetching prayer times: $e');
+      print('Error fetching prayer times: $e'); 
     }
   }
+  
 //fungsi untuk mengambil tanggal hijriyah
   Future<void> fetchHijriDate() async {
-    final url = 'http://api.aladhan.com/v1/gToH?date=2024-12-30';
-
+    final url = 'http://api.aladhan.com/v1/gToH?date=2024-12-30'; 
     try {
-      final response = await http.get(Uri.parse(url));
+      final response = await http.get(Uri.parse(url)); 
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
         setState(() {
-          hijriDate = data['data']['hijri']['date'];
-          gregorianDate = data['data']['gregorian']['date'];
+          hijriDate = data['data']['hijri']['date']; 
+          gregorianDate = data['data']['gregorian']['date']; 
         });
       } else {
-        print('Failed to load Hijri date. Status code: ${response.statusCode}');
+        print('Failed to load Hijri date. Status code: ${response.statusCode}'); 
       }
     } catch (e) {
-      print('Error fetching Hijri date: $e');
+      print('Error fetching Hijri date: $e'); 
     }
   }
+  
 //fungsi untuk mengambil waktu saat ini
   void fetchCurrentDateTime() {
-    final now = DateTime.now();
-    final formatter = DateFormat('EEEE, d MMMM yyyy, HH:mm:ss');
+    final now = DateTime.now(); 
+    final formatter = DateFormat('EEEE, d MMMM yyyy, HH:mm:ss'); 
     setState(() {
-      currentDateTime = formatter.format(now);
+      currentDateTime = formatter.format(now); 
     });
   }
 
