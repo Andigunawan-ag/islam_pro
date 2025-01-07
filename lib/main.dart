@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Jadwal Salat',
+      debugShowCheckedModeBanner: false,  // Menonaktifkan banner debug
       theme: ThemeData(
         primarySwatch: Colors.blue,
         brightness: Brightness.light,
@@ -144,7 +145,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.book, color: Colors.blueAccent),
-              title: Text('Bacaan Salat'),
+              title: Text('Bacaan Salat Dan Doa-Doa'),
               onTap: () {
                 Navigator.push(
                   context,

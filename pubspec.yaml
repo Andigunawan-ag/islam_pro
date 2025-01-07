@@ -1,4 +1,4 @@
-name: comic_8
+name: Islam_Pro
 description: "A new Flutter project."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -15,12 +15,20 @@ dependencies:
   http: ^1.2.2
   cached_network_image: ^3.2.0
   flutter_staggered_grid_view: ^0.6.1
-  intl: ^0.17.0  # Menambahkan dependensi intl untuk format tanggal
+  intl: ^0.17.0 # Menambahkan dependensi intl untuk format tanggal
+  flutter_launcher_icons: ^0.9.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+
+  flutter_icons:
+    android: "launcher_icon"
+    ios: true
+    image_path: "assets/icon/islampro.png"  # Pastikan path ke gambar benar
+    min_sdk_android: 21
+
 
 flutter:
   uses-material-design: true

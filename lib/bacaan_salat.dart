@@ -1,4 +1,4 @@
-import 'package:comic_8/main.dart';
+import 'package:Islam_Pro/main.dart';
 import 'package:flutter/material.dart';
 
 // Halaman utama Bacaan Salat
@@ -204,31 +204,13 @@ class Bacaanshalat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bacaan dan Niat Dzuhur'),
+        title: Text('Bacaan Sholat'),
       ),
       body: SingleChildScrollView(
-        // Membuat halaman bisa digulir
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Niat Salat Dzuhur
-            Text(
-              'Niat Salat Dzuhur',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Text(
-              'اُصَلِّي فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ آدَاءً مَأْمُوْمً / إِمَامًا لِلَّهِ تَعَالَى',
-              style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 5),
-            Text(
-              'Aku berniat salat fardu Dzuhur empat rakaat menghadap kiblat, menjadi makmum/imam karena Allah Ta’ala',
-              style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 20),
-
             // Bacaan Salat Dzuhur
             Text(
               'Bacaan Salat Dzuhur',
@@ -236,108 +218,109 @@ class Bacaanshalat extends StatelessWidget {
             ),
             SizedBox(height: 10),
             _buildSection(
-                'Iqtidal (Berdiri Tegak setelah Ruku)',
-                'سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ',
-                'Sami\' Allahu liman hamidah',
-                'Allah mendengar orang yang memuji-Nya'),
-            _buildSection(
-                'Al-Fatihah',
-                'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ\n'
-                    'اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ\n'
-                    'الرَّحْمَٰنِ الرَّحِيمِ\n'
-                    'مَالِكِ يَوْمِ الدِّينِ\n'
-                    'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ\n'
-                    'اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ\n'
-                    'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلا الضَّآلِّينَ',
-                'Bismillahirrahmanirrahim\n'
-                    'Alhamdulillahirabbil alamin\n'
-                    'Arrahmanirrahim\n'
-                    'Maliki yawmid din\n'
-                    'Iyyaka na\'budu wa iyyaka nasta\'in\n'
-                    'Ihdinas siratal mustaqim\n'
-                    'Siratal ladhina an\'amta \'alayhim ghayril maghdubi \'alayhim walad dhoallin',
-                'Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.\n'
-                    'Segala puji bagi Allah, Tuhan semesta alam.\n'
-                    'Yang Maha Pengasih, Maha Penyayang.\n'
-                    'Yang Menguasai Hari Pembalasan.\n'
-                    'Hanya kepada Engkaulah kami menyembah, dan hanya kepada Engkaulah kami memohon pertolongan.\n'
-                    'Tunjukilah kami jalan yang lurus,\n'
-                    '(yaitu) jalan orang-orang yang telah Engkau beri nikmat kepada mereka, bukan (jalan) mereka yang dimurkai, dan bukan (jalan) mereka yang sesat.'),
-            _buildSection(
-                'Surah Pendek (misal Surah Al-Ikhlas)',
-                'قُلْ هُوَ ٱللَّهُ أَحَدٌۚ',
-                'Qul huwa Allahu Ahad',
-                'Katakanlah, "Dia-lah Allah, yang Maha Esa."'),
+                'Doa Iftitah (Doa Pembukaan Shalat)',
+                'اللَّهُ أَكْبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا وَسُبْحَانَ اللَّهِ بُكْرَةً وَأَصِيلًا\n'
+                    'إِنِّي وَجَّهْتُ وَجْهِيَ لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا مُسْلِمًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ\n'
+                    'إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ\n'
+                    'لَا شَرِيكَ لَهُ وَبِذَٰلِكَ أُمِرْتُ وَأَنَا مِنَ الْمُسْلِمِينَ',
+                'Allahu Akbaru Kabiran, walhamdu lillahi katsiran, wa subhanallahi bukratan wa asilan\n'
+                    'Inni wajjahtu wajhiya lilladhi fatara as-samawati wal-ardh hanifan muslima, wa ma ana minal mushrikun\n'
+                    'Inna salati wa nusuki wa mahyaya wa mamati lillahi rabbil ‘alamin\n'
+                    'La sharika lahu wabidhalika umirtu wa ana minal muslimeen',
+                'Allah Maha Besar, segala puji bagi Allah, Maha Suci Allah di pagi dan petang. Sesungguhnya, aku menghadap wajahku kepada Tuhan yang menciptakan langit dan bumi, dengan penuh ketundukan, dan aku bukan termasuk orang-orang yang musyrik. Sesungguhnya, sholatku, ibadahku, hidupku, dan matiku hanya untuk Allah, Tuhan semesta alam. Tidak ada sekutu bagi-Nya, dan dengan itu aku diperintah, dan aku adalah salah satu orang Muslim.'
+            ),
             _buildSection(
                 'Ruku\' (Bungkukkan badan setelah membaca Surah Pendek)',
-                'سُبْحَانَ رَبِّيَ الْعَظِيمِ',
-                'Subhana rabbiyal \'azim',
-                'Mahasuci Tuhanku yang Maha Agung'),
+                'سُبْحَانَ رَبِّىَ الْعَظِيْمِ وَبِحَمْدِهِ',
+                'Subhana rabbiyal azim wa bihamdih (3x)',
+                'Mahasuci Tuhanku yang Maha Agung dan maha terpuji.'),
             _buildSection(
-                'Bacaan Setelah Ruku\'',
-                'رَبَّنَا لَكَ الْحَمْدُ حَمْدًا طَيِّبًا مُبَارَكًا فِيهِ',
-                'Rabbana lakal hamd, hamdan tayyiban mubarakaan fihi',
-                'Ya Tuhan kami, hanya bagi-Mu lah segala puji, pujian yang baik lagi diberkahi.'),
+                'Iqtidal (Berdiri Tegak setelah Ruku)',
+                'Sami\' Allahu liman hamidah',
+                'رَبَّنَا لَكَ الْحَمْدُ مِلْءَ السَّمَوَاتِ وَمِلْءَ الْأَرْضِ وَمِلْءَ مَا شِئْتَ مِنْ شَيْءٍ بَعْدُ',
+                'Rabbanaaa lakal hamdu mil ussamaawaati wa mil ul ardhi wa mil-u maa syik ta min syai im ba du'
+                    'Artinya: "Ya Allah Tuhan Kami, Bagi-Mu lah segala puji, sepenuh langit dan bumi, dan sepenuh barang yang Kau kehendaki sesudah itu.'),
+
             _buildSection(
                 'Sujud (Sujud pertama setelah Iktidal)',
-                'سُبْحَانَ رَبِّيَ الْأَعْلَىٰ',
-                'Subhana rabbiyal a\'la',
-                'Mahasuci Tuhanku Yang Maha Tinggi'),
+                'سُبْحَانَ رَبِّىَ الأَعْلَى وَبِحَمْدِهِٰ',
+                'Subhana rabbiyal a\'la wa bihamdih',
+                'Mahasuci Tuhanku Yang Maha Tinggi dan pujian untuk Nya'),
             _buildSection(
                 'Duduk di Antara Dua Sujud',
-                'رَبِّ اغْفِرْ لِي وَارْحَمْنِي وَاجْبُرْنِي وَارْفَعْنِي',
-                'Rabbighfir li warhamni wajburni warfa\'ni',
+                'رَبِّ اغْفِرْلِىْ وَارْحَمْنِىْ وَاجْبُرْنِىْ وَارْفَعْنِىْ وَازُقْنِىْ وَاهْدِنِىٌ وَعَا فِنِىْ وَاعْفُ عَنِّىْ',
+                'Rabbighfir li warhamni wajburni warfa\'ni warzuqni wahdini wa\'afini wa\'fu anni',
                 'Tuhanku, ampunilah aku, rahmatilah aku, cukupkanlah keperluanku, dan angkatlah derajatku.'),
-            _buildSection('Sujud Kedua', 'سُبْحَانَ رَبِّيَ الْأَعْلَىٰ',
-                'Subhana rabbiyal a\'la', 'Mahasuci Tuhanku Yang Maha Tinggi'),
+            _buildSection(
+                'Sujud Kedua',
+                'سُبْحَانَ رَبِّىَ الأَعْلَى وَبِحَمْدِهِٰ',
+                'Subhana rabbiyal a\'la wa bihamdih',
+                'Mahasuci Tuhanku Yang Maha Tinggi dan pujian untuk Nya'),
+
             _buildSection(
                 'Tasyahhud Akhir',
-                'اَلتَّحِيَاتُ لِلَّهِ وَالصَّلَواتُ وَالطَّيِّبَاتُ، السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
-                'At-tahiyyatu lillahi wa-salawatu wa-tayyibat\n'
-                    'Assalamu \'alayka ayyuhannabiyy wa rahmatullahi wa barakatuhu\n'
-                    'Assalamu \'alayna wa \'ala ibadillahi as-salihin\n'
-                    'Ashhadu alla ilaha illallah wa ashhadu anna Muhammadan abduhoo wa rasuluhu',
+                'التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلَّهِ السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّ اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى سَيِّدِ نَا إِبْرَاهِيمَ وَعَلَى آلِ سَيِّدِ نَا إِبْرَاهِيمَ وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ سَيِّدِ نَا مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى سَيِّدِ نَا إِبْرَاهِيمَ وَعَلَى آلِ سَيِّدِ نَا إِبْرَاهِيمَ فِي الْعَـٰلَمِينَ إِنَّكَ حَمِيدٌ مَّجِيدٌُ',
+                ' Attahiyyaatul mubaarakaatush shalawaatuth thoyyibaatulillaah Assalaamu alaika ayyuhan nabiyyu warahmatullaahi wabarakaatuh Assalaamu alaina wa\'alaa ibaadillaahishaalihiin Asyhaduallaa ilaaha illallaah, wa asyhadu anna Muhammad Rasuulullaah. Allahumma shalli \'alaa sayyidinaa muhammad, Wa alaa aali sayyidina muhammad. Kamaa shallaita \n'
+                'alaa sayyidinaa Ibraahim wa\'alaa aali sayyidinaa ibraahim, Wabaarik \'alaa sayyidinaa muhammad wa \'alaa aali sayyidina muhammad. Kamaa baarakta \'alaa sayyidinaa ibraahiim wa\'alaa aali sayyidina Ibraahiim fil\'aalamiina Innaka hamiidum majiid.',
+
                 'Salam sejahtera bagi Allah, segala puji dan doa, serta keberkahan.\n'
                     'Salam sejahtera untukmu wahai Nabi, rahmat Allah dan berkah-Nya.\n'
                     'Salam sejahtera untuk kami dan bagi seluruh hamba Allah yang saleh.\n'
-                    'Saya bersaksi bahwa tidak ada Tuhan selain Allah dan saya bersaksi bahwa Muhammad adalah hamba-Nya dan utusan-Nya.'),
+                    'Aku bersaksi tidak ada sesembahan yang berhak disembah kecuali Allah. Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah. Ya Allah, limpahkanlah rahmat kepada Nabi Muhammad. \n'
+                    'Ya Allah. Limpahilah rahmat atas keluarga Nabi Muhammad. Sebagaimana pernah Engkau beri rahmat kepada Nabi Ibrahim dan keluarganya.\n'
+                'Dan limpahilah berkah atas Nabi Muhammad beserta para keluarganya. Sebagaimana Engkau memberi berkah kepada Nabi Ibrahim dan keluarganya. Diseluruh alam semesta Engkaulah yang terpuji, dan Maha Mulia.'),
+            _buildSection(
+                'Salam Penutup (Setelah Tasyahhud)',
+                'السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ',
+                'Assalamu \'alaykum wa rahmatullahi wa barakatuhu',
+                'Semoga keselamatan, rahmat Allah, dan keberkahan-Nya tercurah kepadamu.'),
           ],
         ),
       ),
     );
   }
 
-  // Method untuk membangun tiap bagian bacaan
+  // Method untuk membangun tiap bagian bacaan dengan border biru dan panjang box yang sama
   Widget _buildSection(String title, String arab, String latin, String arti) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 5),
-          Text(
-            arab,
-            style: TextStyle(fontSize: 14, fontFamily: 'Scheherazade'),
-          ),
-          SizedBox(height: 5),
-          Text(
-            latin,
-            style: TextStyle(fontSize: 14),
-          ),
-          SizedBox(height: 5),
-          Text(
-            arti,
-            style: TextStyle(fontSize: 14),
-          ),
-        ],
+      child: Container(
+        padding: EdgeInsets.all(12.0),
+        width: double.infinity, // Membuat box lebar penuh
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.blue, width: 2), // Pinggiran warna biru
+          borderRadius: BorderRadius.circular(8), // Untuk membuat sudut melengkung
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 5),
+            Text(
+              arab,
+              style: TextStyle(fontSize: 14, fontFamily: 'Scheherazade'),
+            ),
+            SizedBox(height: 5),
+            Text(
+              latin,
+              style: TextStyle(fontSize: 14),
+            ),
+            SizedBox(height: 5),
+            Text(
+              arti,
+              style: TextStyle(fontSize: 14),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
+
 
 // Halaman Bacaan Salat Asar
 class Bacaandoasehabissholat extends StatelessWidget {
@@ -351,7 +334,7 @@ class Bacaandoasehabissholat extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.0),
-          border: Border.all(color: Colors.grey.shade300),
+          border: Border.all(color: Colors.blue, width: 2), // Border color set to blue
           boxShadow: [
             BoxShadow(
               color: Colors.grey.shade200,
@@ -442,7 +425,7 @@ class Bacaandoasehabissholat extends StatelessWidget {
               // 5th Section with Box
               _buildSection(
                 '5. Membaca Surat Al-Fatihah dan Ayat Kursi:',
-                'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ ...',
+                'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ ...',
                 'A’udhu billahi minash-shaytan ir-rajim. Bismillahir Rahmanir Rahim ...',
                 'Aku berlindung kepada Allah dari godaan syaitan yang terkutuk. Dengan nama Allah yang Maha Pengasih lagi Maha Penyayang...',
               ),
@@ -501,8 +484,59 @@ class Bacaandoasehabissholat extends StatelessWidget {
   }
 }
 
+
 // Halaman Bacaan Salat Maghrib
 class Bacaandoadoapilihan extends StatelessWidget {
+  // Helper function to wrap text in a neat box
+  Widget _buildSection(String title, String arab, String latin, String arti) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: Container(
+        width: double.infinity, // This ensures the container extends to the full width
+        padding: EdgeInsets.all(16.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(8.0),
+          border: Border.all(color: Colors.blue, width: 2), // Border color set to blue
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade200,
+              blurRadius: 8.0,
+              offset: Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 8),
+            Text(
+              arab,
+              style: TextStyle(fontSize: 18),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 8),
+            Text(
+              latin,
+              style: TextStyle(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 8),
+            Text(
+              arti,
+              style: TextStyle(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -516,254 +550,84 @@ class Bacaandoadoapilihan extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Doa 1
-              Text(
+              _buildSection(
                 '1. Doa Untuk Memulai Kebaikan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اَللَّهُمَّ إِنِّي أَسْتَجِيرُ بِكَ مِنْ فِتْنَتِهِمْ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma inni asta’idu bika min fitnatihim.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, aku berlindung kepada-Mu dari fitnah mereka."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 2
-              Text(
+              _buildSection(
                 '2. Doa Memohon Perlindungan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اَللَّهُمَّ اجْعَلْنِي فِي حِفْظِكَ وَرَعَايَتِكَ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma ajilni fi hifzika wa ri’ayatik.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, jadikan aku dalam penjagaan dan perawatan-Mu."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 3
-              Text(
+              _buildSection(
                 '3. Doa Mohon Keberkahan dalam Hidup',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اَللَّهُمَّ بَارِكْ لَنَا فِي رِزْقِنَا وَأَعْمَالِنَا',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma barik lana fi rizqina wa a’malina.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, berkahilah rezeki dan amal kami."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 4
-              Text(
+              _buildSection(
                 '4. Doa Mohon Petunjuk dan Keberkahan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اَللَّهُمَّ اجْعَلْنَا مِنَ الَّذِينَ يَسْتَمِعُونَ الْقَوْلَ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma ajilna minal-ladhina yastami’unal-qawla.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, jadikan kami termasuk orang-orang yang mendengarkan perkataan yang baik."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 5
-              Text(
+              _buildSection(
                 '5. Doa Ketika Menghadapi Kesulitan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Rabbi la tazurni fardan wa anta khairul-warithin.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Tuhanku, janganlah Engkau tinggalkan aku sendirian dan Engkau adalah sebaik-baiknya pewaris."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 6
-              Text(
+              _buildSection(
                 '6. Doa Memohon Ampunan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ عَظِيمٍ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Astaghfirullaha rabbi min kulli dzambin azim.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Aku memohon ampun kepada Allah, Tuhan-ku, dari setiap dosa yang besar."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 7
-              Text(
+              _buildSection(
                 '7. Doa Mohon Kekuatan dan Kemenangan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'رَبِّ أَعِنِّي وَيُسِّرْ لِي فِي أَمْرِي',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Rabbi a’inni wa yassir li fi amri.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Tuhanku, bantulah aku dan permudahkanlah urusanku."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 8
-              Text(
+              _buildSection(
                 '8. Doa Untuk Menghindari Fitnah Dunia',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اَللَّهُمَّ اجْنِبْنَا فِتْنَةَ الدُّنْيَا وَعَذَابَ الْقَبْرِ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma ajinnabna fitnatal-dunya wa adzabil-qabri.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, jauhkan kami dari fitnah dunia dan azab kubur."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 9
-              Text(
+              _buildSection(
                 '9. Doa Memohon Keselamatan dan Kesehatan',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اللَّهُمَّ اجْعَلْنَا مِنْ أَهْلِ الْجَنَّةِ',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma ajilna min ahlil-jannah.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, jadikan kami termasuk ahli surga."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
 
               // Doa 10
-              Text(
+              _buildSection(
                 '10. Doa Setelah Sholat',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8),
-              Text(
                 'اللَّهُمَّ تَقَبَّلْ مِنَّا',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Allahumma taqabbal minna.',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 8),
-              Text(
                 'Artinya: "Ya Allah, terimalah amalan kami."',
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
               ),
-              SizedBox(height: 16),
             ],
           ),
         ),
@@ -779,13 +643,12 @@ class Bacaandoatahlil extends StatelessWidget {
     return BacaanPage(
       title: 'Bacaan Doa Tahlil',
       niat: 'لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ وَلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
-      artiNiat:'Tiada Tuhan selain Allah, hanya Dia yang Maha Esa, tiada sekutu bagi-Nya, miliki-Nya lah segala kerajaan dan hanya bagi-Nya segala pujian, dan Dia Maha Kuasa atas segala sesuatu.',
+      artiNiat: 'Tiada Tuhan selain Allah, hanya Dia yang Maha Esa, tiada sekutu bagi-Nya, miliki-Nya lah segala kerajaan dan hanya bagi-Nya segala pujian, dan Dia Maha Kuasa atas segala sesuatu.',
       bacaan: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ حَمْدًا يُوَافِي نِعْمَاهُ وَيُكَافِئُ مَزِيدَهُ يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلاَلِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ',
       artiBacaan: 'Bismillahirrahmaanirrahiim. Alhamdu lillaahi rabbil aalamiin, hamdan yuwaafii ni amahu wayukaafii maziidahu. Ya rabbanaa lakal hamdu kamaa yan baghhi lijalaali wajhika wa azhiimi sulthaanika. Allahumma shalli alaa sayyidinaa muhammadin wa alaa aali sayyidinaa muhammad. Artinya: Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang. Segala puji bagi Allah, Tuhan semesta alam, puji yang sesuai dengan ni’mat-Nya dan dapat membalas karunia-Nya. Ya Tuhan kami, hanya kepada-Mu segala pujian, sebagaimana yang layak bagi keagungan wajah-Mu dan kebesaran kerajaan-Mu. Ya Allah, curahkanlah shalawat kepada junjungan kami, Nabi Muhammad, dan kepada keluarga Nabi Muhammad.',
     );
   }
 }
-
 
 // Widget umum untuk menampilkan bacaan dan niat salat
 class BacaanPage extends StatelessWidget {
@@ -811,41 +674,53 @@ class BacaanPage extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildSection('bacaan tahlil', niat, artiNiat),
-            SizedBox(height: 20),
-            _buildSection('doa', bacaan, artiBacaan),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildSection('Bacaan Tahlil', niat, artiNiat, true),
+              SizedBox(height: 20),
+              _buildSection('Doa', bacaan, artiBacaan, false),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildSection(String title, String bacaan, String artiBacaan) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.blueAccent,
+  Widget _buildSection(String title, String bacaan, String artiBacaan, bool isNiat) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        color: Colors.white, // Background putih untuk niat
+        borderRadius: BorderRadius.circular(8.0),
+        border: Border.all(color: Colors.blue, width: 2), // Border biru
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.blueAccent,
+            ),
           ),
-        ),
-        SizedBox(height: 10),
-        Text(
-          bacaan,
-          style: TextStyle(fontSize: 18),
-        ),
-        SizedBox(height: 10),
-        Text(
-          'Artinya: $artiBacaan',
-          style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic),
-        ),
-      ],
+          SizedBox(height: 10),
+          Text(
+            bacaan,
+            style: TextStyle(fontSize: 18),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 10),
+          Text(
+            'Artinya: $artiBacaan',
+            style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 }

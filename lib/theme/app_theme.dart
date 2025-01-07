@@ -7,9 +7,13 @@ final ThemeData appTheme = ThemeData(
     titleLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.blueAccent),
   ),
   visualDensity: VisualDensity.adaptivePlatformDensity,
-  scaffoldBackgroundColor: const Color.fromARGB(255, 240, 237, 237),
+
+  // Mengganti warna latar belakang menjadi biru pastel yang lebih lembut
+  scaffoldBackgroundColor: Color(0xFFB3E5FC),  // Biru pastel
+
   colorScheme: ColorScheme.fromSwatch().copyWith(
     secondary: Colors.blueAccent,
   ),
+
   iconTheme: IconThemeData(color: Colors.blue),
 );
