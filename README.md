@@ -1,6 +1,6 @@
-# comic_8
+# islam_pro
 
-A new Flutter project.
+adalah sebuah aplikasi waktu solat,bacaan dan do'a pendek
 
 ## Getting Started
 
