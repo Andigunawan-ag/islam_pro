@@ -1,4 +1,4 @@
-package com.example.comic_8
+package com.example.Islam_Pro
 
 import io.flutter.embedding.android.FlutterActivity
 
